@@ -48,7 +48,7 @@ namespace ConsoleApplication4
 
         public static void testFunctionNew()
         {
-            List<string> studentTotalThing = new List<string>();
+            SortedSet<string> studentTotalThing = new SortedSet<string>();
             while (true)
             {
              
