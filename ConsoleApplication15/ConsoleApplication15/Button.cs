@@ -15,7 +15,7 @@ namespace ConsoleApplication15
         
         public double totalPrice()
         {
-            return price * numberOf;
+            return this.price * this.numberOf;
         }
     }
 }
