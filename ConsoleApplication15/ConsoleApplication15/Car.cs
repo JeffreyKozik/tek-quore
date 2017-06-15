@@ -10,10 +10,10 @@ namespace ConsoleApplication15
     {
         public string make;
         public string model;
-        string color;
-        int year;
-        float MSRP;
-        int VIN;
+        public string color;
+        public int year;
+       public float MSRP;
+       public int VIN;
         public float sellCar(string person, float salesPrice)
         {
             return this.MSRP / salesPrice * 1000;
