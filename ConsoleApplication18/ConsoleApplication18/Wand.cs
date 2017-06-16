@@ -17,9 +17,9 @@ namespace HarryPotterDuel
         public Wand()
         {
             length = 11.0;
-            core = "unicorn hair";
-            flex = "supple";
-            wood = "walnut";
+            core = "Unicorn Hair";
+            flex = "Supple";
+            wood = "Black Walnut";
             xp = 5;
             health = 100;
         }

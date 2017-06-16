@@ -8,7 +8,7 @@ namespace HarryPotterDuel
 {
     public class Monster
     {
-        public int health;
+        public double health;
         public int attack;
         public string name;
 
@@ -22,7 +22,23 @@ namespace HarryPotterDuel
         {
             Random rand1 = new Random();
             int chooser1 = rand1.Next(1, rangeDamage);
-            health = health - (wand.xp + chooser1 + baseDamage);
+            Console.WriteLine("After 3 seconds have elapsed, press the a key and then enter, the closer to 3 seconds, the more damage your spell does");
+            var extra = System.Diagnostics.Stopwatch.StartNew();
+            double extraTime = 0;
+            double bonusDamage = 0;
+            double bonusDamage1 = 0;
+            double bonusDamage2 = 0;
+            if (Console.ReadLine() == "a") { 
+            extra.Stop();
+                 extraTime = extra.ElapsedMilliseconds;
+                 bonusDamage = ((Math.Abs(3000 - extraTime))/1000);
+                 bonusDamage1 = 1 / bonusDamage;
+                 bonusDamage2 = Math.Round((bonusDamage1 * bonusDamage1));
+                Console.WriteLine(extraTime);
+                Console.WriteLine(bonusDamage2);
+
+            }
+            health -= Convert.ToDouble((wand.xp + chooser1 + baseDamage + bonusDamage2));
         }
 
         public void attackWand(Wand wand)
