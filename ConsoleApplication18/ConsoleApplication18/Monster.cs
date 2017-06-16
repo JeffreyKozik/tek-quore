@@ -18,7 +18,7 @@ namespace HarryPotterDuel
             attack = attack1;
             name = name1;
         }
-        public void loseHealth(Wand wand, int baseDamage, int rangeDamage)
+        public void loseHealth(Wand wand, int baseDamage, int rangeDamage, int skillInvolved)
         {
             Random rand1 = new Random();
             int chooser1 = rand1.Next(1, rangeDamage);
@@ -33,7 +33,7 @@ namespace HarryPotterDuel
                  extraTime = extra.ElapsedMilliseconds;
                  bonusDamage = ((Math.Abs(3000 - extraTime))/1000);
                  bonusDamage1 = 1 / bonusDamage;
-                 bonusDamage2 = Math.Round((bonusDamage1 * bonusDamage1));
+                 bonusDamage2 = Math.Round(Math.Pow(bonusDamage1, skillInvolved));
                 Console.WriteLine(extraTime);
                 Console.WriteLine(bonusDamage2);
 

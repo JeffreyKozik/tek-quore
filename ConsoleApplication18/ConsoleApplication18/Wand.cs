@@ -36,14 +36,14 @@ namespace HarryPotterDuel
 
         public void expelliarmus(Monster monst)
         {
-            monst.loseHealth(this, 1, 2);
+            monst.loseHealth(this, 1, 2, 2);
         }
 
         public void stupefy(Monster monst)
         {
             if (xp >= 10)
             {
-                monst.loseHealth(this, 1, 3);
+                monst.loseHealth(this, 1, 3, 5);
             }
             else
             {
@@ -55,7 +55,7 @@ namespace HarryPotterDuel
         {
             if (xp >= 20)
             {
-                monst.loseHealth(this, 4, 3);
+                monst.loseHealth(this, 4, 3, 2);
             }
             else
             {
@@ -66,7 +66,7 @@ namespace HarryPotterDuel
         {
             if (xp >= 30)
             {
-                monst.loseHealth(this, 1, 10);
+                monst.loseHealth(this, 1, 10,2);
             }
             else
             {
@@ -78,7 +78,7 @@ namespace HarryPotterDuel
         {
             if (xp >= 40)
             {
-                monst.loseHealth(this, 2, 10);
+                monst.loseHealth(this, 2, 10,2);
             }
             else
             {
@@ -90,7 +90,7 @@ namespace HarryPotterDuel
         {
             if (xp >= 50)
             {
-                monst.loseHealth(this, 5, 10);
+                monst.loseHealth(this, 5, 10,2);
             }
             else
             {
